@@ -14,7 +14,7 @@ from home.src.download.queue import PendingList
 from home.src.download.subscriptions import PlaylistSubscription
 from home.src.download.yt_dlp_base import YtWrap
 from home.src.es.connect import ElasticWrap, IndexPaginate
-from home.src.index.channel import YoutubeChannel
+from home.src.index.channel import YoutubeChannel 
 from home.src.index.comments import CommentList
 from home.src.index.playlist import YoutubePlaylist
 from home.src.index.video import YoutubeVideo, index_new_video
@@ -267,7 +267,7 @@ class VideoDownloader:
         """initial obs"""
         self.obs = {
             "merge_output_format": "mp4",
-            "outtmpl": (self.cache_dir + "/download/%(id)s.mp4"),
+            "outtmpl": (self.cache_dir + "/download/%(title)s.mp4"),
             "progress_hooks": [self._progress_hook],
             "noprogress": True,
             "continuedl": True,
